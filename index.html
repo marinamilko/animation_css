@@ -13,7 +13,9 @@
         } */
 
         body {
-            background-color: green;
+            background: #23ABF2; /* Для старых браузров */
+            background: linear-gradient(to right, #23ABF2, #F69873);
+            padding: 10px;
         }
 
         h1,
@@ -22,7 +24,6 @@
             text-align: center;
             color: blueviolet;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-
         }
 
         h3 {
@@ -35,6 +36,7 @@
             /* width: 33%; */
             height: 300px;
             /* float: left; */
+            
         }
 
         .main__images {
@@ -47,6 +49,35 @@
             color: red;
 
         }
+
+        .i1:hover {
+            filter: blur(10px);
+            transition: 5s;
+            transform: scale(1.2);
+        }
+
+        .i2:hover {
+                        filter: grayscale(100%);
+                        transition: 5s;
+                        transform: scale(1.2);
+        }
+
+        .i3 {
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes rotation {
+            0% {
+                transform:rotateY(0deg);
+            }
+            100% {
+                transform:rotateY(360deg);
+            }
+        }
+
     </style>
 <link rel="icon" type="image/png" href="images/icon.png">
     <title>Hobby</title>
@@ -73,15 +104,15 @@
    
     <main>
         <div class="main__images">
-            <div>
+            <div class="i1">
                 <img src="images/1.jfif" alt="Барбус суматранський">
                 <!-- <figcaption><i>Барбус суматранський</figcaption></i> -->
             </div>
-            <div>
+            <div class="i2">
                 <img src="images/2.png" alt="Цихлазома бриліантова">
                 <!-- <figcaption><i>Цихлазома бриліантова</figcaption></i> -->
             </div>
-            <div>
+            <div class="i3">
                 <img src="images/3.png" alt="Тернеція">
                 <!-- <figcaption><i>Тернеція</figcaption></i> -->
             </div>
